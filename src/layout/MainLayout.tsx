@@ -1,17 +1,12 @@
 import { Outlet } from 'react-router-dom';
+import Header from '../components/Header';
 
 const MainLayout = () => {
   return (
-    <div className="flex h-screen bg-gray-100">
-      {/* Espaço para a futura Barra Lateral */}
-      <aside className="w-64 bg-gray-800 text-white p-4">
-        <h2 className="text-xl font-bold mb-4">ReservaLab</h2>
-        <p>(Barra Lateral)</p>
-      </aside>
-
-      {/* Área de Conteúdo Principal */}
-      <main className="flex-1 p-8 overflow-y-auto">
-        <Outlet /> {/* As páginas (Dashboard, etc.) serão renderizadas aqui */}
+    <div className="flex flex-col h-screen bg-white">
+      <Header />
+      <main className="flex-1 p-4 sm:p-6 lg:p-8 overflow-y-auto">
+        <Outlet />
       </main>
     </div>
   );

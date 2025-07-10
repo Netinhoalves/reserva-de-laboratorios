@@ -8,10 +8,8 @@ import NewReservation from './pages/NewReservation';
 function App() {
   return (
     <Routes>
-      {/* Rota para a página de Login (fora do layout principal) */}
       <Route path="/login" element={<Login />} />
 
-      {/* Rotas que compartilham o MainLayout */}
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="lab/:id" element={<LabSchedule />} />
