@@ -1,69 +1,50 @@
-# React + TypeScript + Vite
+# Reserva de Laboratórios
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## SOBRE ESTE PROJETO!
 
-Currently, two official plugins are available:
+Este é um projeto proposto na disciplina "Desenvolvimento Web Avançado", do curso superior de Análise e Desenvolvimento de Sistemas, no Instituto Federal de Mato Grosso do Sul (IFMS). O projeto ["Reserva de Laboratórios"](https://reserva-de-laboratorios.vercel.app/) tem como objetivo demonstrar as habilidades em desenvolvimento de interfaces modernas e dinâmicas com React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Objetivo
 
-## Expanding the ESLint configuration
+O objetivo do projeto é criar uma aplicação web interativa para a reserva de laboratórios, com base em telas de design para mobile, com a necessidade de criar também uma versão responsiva para desktop.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+As funcionalidades implementadas incluem:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Tela de autenticação de usuário.
+- Um Dashboard para visualização e filtragem dos laboratórios disponíveis.
+- Uma página de agenda com um calendário visual para cada laboratório, exibindo os agendamentos existentes.
+- Um formulário para criar novos agendamentos, com funcionalidade de pré-preenchimento de data ao clicar em um dia no calendário.
+- Navegação entre as diferentes telas da aplicação.
+- Um cabeçalho interativo com menu dropdown para o usuário.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Tecnologias usadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **React**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **React Router** para a navegação
+- **Axios** para o consumo da API
+- **date-fns** para manipulação de datas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Como Executar Localmente
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Siga os passos abaixo para executá-lo em sua máquina.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  **Clone o repositório:** 
+    ```bash
+    git clone <URL_DO_SEU_REPOSITORIO_NO_GITHUB>
+    ```
+2.  **Navegue até a pasta do projeto:** 
+    ```bash
+    cd <NOME_DA_PASTA_DO_PROJETO>
+    ```
+3.  **Instale as dependências:** 
+    ```bash
+    npm install
+    ```
+4.  **Inicie o servidor de desenvolvimento:** 
+    ```bash
+    npm run dev
+    ```
+5.  Abra seu navegador e acesse `http://localhost:5173` (ou a porta indicada no terminal).
